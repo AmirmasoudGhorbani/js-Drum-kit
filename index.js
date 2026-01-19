@@ -6,7 +6,8 @@ for (var i=0 ; i < numberOfButtons ; i++){
     
 
       var buttonInnerHTML = this.innerHTML;
-      makeSound(buttonInnerHTML)
+      makeSound(buttonInnerHTML);
+      buttonAnimation(buttonInnerHTML);
     });
 }
 
@@ -14,6 +15,7 @@ for (var i=0 ; i < numberOfButtons ; i++){
 document.addEventListener('keypress', function(event) {
 
   makeSound(event.key);
+  buttonAnimation(event.key)
 });
 
 function makeSound(key){
